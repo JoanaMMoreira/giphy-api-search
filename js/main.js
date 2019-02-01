@@ -9,8 +9,8 @@ $(document).ready(function () {
     return ret.join("&");
   }
 
-  function httpGetAsync(theUrl, callback) {
-    var xmlHttps = new XMLHttpRequest();
+  function httpsGetAsync(theUrl, callback) {
+    var xmlHttps = new XMLHttpsRequest();
     xmlHttps.onreadystatechange = function () {
       if (xmlHttps.readyState == 4 && xmlHttps.status == 200)
         callback(xmlHttps.responseText);
