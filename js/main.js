@@ -10,7 +10,7 @@ $(document).ready(function () {
   }
 
   function httpsGetAsync(theUrl, callback) {
-    var xmlHttps = new XMLHttpsRequest();
+    var xmlHttps = new XMLHttpRequest();
     xmlHttps.onreadystatechange = function () {
       if (xmlHttps.readyState == 4 && xmlHttps.status == 200)
         callback(xmlHttps.responseText);
