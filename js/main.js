@@ -29,7 +29,7 @@ $(document).ready(function () {
     };
     params = encodeQueryData(params);
 
-    httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function (data) {
+    httpGetAsync('https://api.giphy.com/v1/gifs/search?' + params, function (data) {
       var gifs = JSON.parse(data);
 
       var gif1 = gifs.data[0].images.fixed_width.url;
