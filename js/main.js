@@ -10,13 +10,13 @@ $(document).ready(function () {
   }
 
   function httpGetAsync(theUrl, callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function () {
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-        callback(xmlHttp.responseText);
+    var xmlHttps = new XMLHttpRequest();
+    xmlHttps.onreadystatechange = function () {
+      if (xmlHttps.readyState == 4 && xmlHttps.status == 200)
+        callback(xmlHttps.responseText);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
+    xmlHttps.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttps.send(null);
   }
 
   function getGif(query) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
     };
     params = encodeQueryData(params);
 
-    httpGetAsync('https://api.giphy.com/v1/gifs/search?' + params, function (data) {
+    httpsGetAsync('https://api.giphy.com/v1/gifs/search?' + params, function (data) {
       var gifs = JSON.parse(data);
 
       var gif1 = gifs.data[0].images.fixed_width.url;
