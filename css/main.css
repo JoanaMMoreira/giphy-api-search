@@ -23,6 +23,10 @@ html *:after:focus {
   margin-top: 50px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .input-wrapper {
   position: relative;
   width: 90%;
@@ -100,7 +104,9 @@ html *:after:focus {
   text-align: center;
 }
 
-.col-md-7, .col-md-3, .col-md-2 {
+.col-md-7,
+.col-md-3,
+.col-md-2 {
   padding: 0;
 }
 
