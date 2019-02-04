@@ -35,7 +35,7 @@ $(document).ready(function () {
       for (i = 0; i < gifs.data.length; i++) {
         var gif = gifs.data[i].images.fixed_width.url;
         var position = $(".pos-" + (i + 1));
-        position.html("<a href='" + gifs.data[0].embed_url + "'><img src='" + gif + "' alt='gif'></a>");
+        position.html("<a href='" + gifs.data[i].embed_url + "'><img src='" + gif + "' alt='gif'></a>");
       }
 
       console.log(gifs.data);
