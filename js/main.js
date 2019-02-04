@@ -39,17 +39,24 @@ $(document).ready(function () {
       }
 
       console.log(gifs.data);
+      if (gifs.data.length == 0) {
+        console.log('No gif was found');
+        $('.error-message').show();
+      }
+
     });
   }
   $("#inputQuery").on('keypress', function (e) {
     if (e.which == 13) {
       var query = $("#inputQuery").val();
       getGif(query);
+      $('.error-message').hide();
     }
   });
 
   $("#submitButton").on("click", function () {
     var query = $("#inputQuery").val();
     getGif(query);
+    $('.error-message').hide();
   });
 })

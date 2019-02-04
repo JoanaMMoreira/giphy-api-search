@@ -23,6 +23,12 @@ html *:after:focus {
   margin-top: 50px;
 }
 
+.error-message {
+  text-align: center;
+  font-size: 0.8em;
+  display: none;
+}
+
 a:hover {
   text-decoration: none;
 }
